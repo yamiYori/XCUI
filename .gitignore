@@ -3,3 +3,6 @@
 
 #c++
 *.o
+
+#dead code
+DeadCode/
