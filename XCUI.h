@@ -1,9 +1,10 @@
 #ifndef __XCUI_H_
 #define __XCUI_H_
 
+#include"config.h"
+
 #include<string>
 #include<vector>
-#include"config.h"
 #include"BasicOP.h"
 #include"CommonZone.h"
 #include"DataType.h"

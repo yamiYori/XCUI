@@ -7,24 +7,26 @@
 namespace XCUI
 {
 
-
 	class WidgetBase{
 	public:
 		std::string wgtName;            //Must be unique below one parent
-		bool active;
 		bool enable;
 		bool visble;
-        bool operatable;
+        const bool operatable;
 
 		point pos;
         rect size;
 
-		int _event OnLoad()={};
-		int _event OnShow()={};
-		int _event On
+		int _event OnLoad(){};
+		int _event OnShow(){};
+		int _event OnHide(){};
+		int _event OnRefresh(){};
 
-		virtual int  DrawBuf()={};
-		virtual void* Widgetctl(WidgetBase& src,std::string& info)={};   //for widget interactive
+		virtual int Print_to_display_buffer(byte **canvas){};
+		virtual void* Widgetctl(WidgetBase& activesrc, std::string& info){};   //for widget interactive
+		virtual int Widgetctl(WidgetBase& activesrc, dword optname, const void *optval){};   //unix style widget interactive
+
+		virtual int Refresh(byte **canvas) final;
 
 	};
 
