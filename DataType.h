@@ -8,6 +8,8 @@ namespace XCUI
     struct rect{
         int x;
         int y;
+
+        rect(int ax,int ay):x(ax),y(ay){};
     };
     typedef rect point;
 
