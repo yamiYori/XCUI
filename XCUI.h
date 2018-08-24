@@ -10,6 +10,8 @@
 #include"DataType.h"
 #include"xui.h"
 
+#include "widgets/form.h"
+
 namespace XCUI
 {
 
